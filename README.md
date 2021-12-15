@@ -1,4 +1,4 @@
-# testes_software
+# Testes de Software
 Trabalho Prático sobre Testes de Software
 
 Vitor Ribeiro dos Santos - 2017023676
