@@ -15,6 +15,8 @@ Rocket.Chat implementa um método de sendSimpleMessage que envia uma única mens
 
 Nesse método temos o seguinte teste:
 
+```
+
 export const sendSimpleMessage = ({ roomId, text = 'test message', tmid }) => {
 	if (!roomId) {
 		throw new Error('"roomId" is required in "sendSimpleMessage" test helper');
@@ -32,6 +34,8 @@ export const sendSimpleMessage = ({ roomId, text = 'test message', tmid }) => {
 		.send({ message });
 };
 
+```
+
 No teste o metodo recebe o id da sala, a mensagem e o contexto e espera-se que ele retorne um mensagem de erro caso não tenha passado as informações corretas ou sucesso caso consiga enviar a mensagem
 
 
@@ -40,6 +44,8 @@ No teste o metodo recebe o id da sala, a mensagem e o contexto e espera-se que e
 Rocket.Chat tem um método para criar emojis com base em uma nova imagem que o cliente envie para API
 
 Nesse metodo temos o seguinte teste
+
+```
 
 it('should create new custom emoji', (done) => {
 			request.post(api('emoji-custom.create'))
@@ -56,6 +62,7 @@ it('should create new custom emoji', (done) => {
 				})
 				.end(done);
 		});
+```
     
 Nesse método ele aciona o metodo create de emoji-custom enviando a imagem e espera que ele retorna sucesso ou erro
 
@@ -64,6 +71,8 @@ Nesse método ele aciona o metodo create de emoji-custom enviando a imagem e esp
 Rocket.chat tem um método para retonar a lista de sons customizados que um cliente deseja utilzar no chat
 
 Nesse metodo temos o seguinte teste:
+
+```
 
 describe('[/custom-sounds.list]', () => {
 		it('should return custom sounds', (done) => {
@@ -79,5 +88,5 @@ describe('[/custom-sounds.list]', () => {
 				.end(done);
 		});
 	});
-  
+ ```
 Nesse método ele aciona o método list de custom-sounds aguaradnno o retorno da lista de sons a ser utilizado
